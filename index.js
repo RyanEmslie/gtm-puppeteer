@@ -95,11 +95,13 @@ const containerPermissions = async (accountsArr) => {
       await page.click('button[aria-label="Close this slider window"]');
     }
   }
+  browser.close();
 };
 
+// Creates CSV file from adminsArr
 async function createCSV() {
   const csv = new ObjectsToCsv(adminsArr);
-  await csv.toDisk("./test.csv");
+  await csv.toDisk("./gtm_admim_accounts.csv");
   console.log(await csv.toString());
 }
 
@@ -110,5 +112,3 @@ async function engage() {
 }
 
 engage();
-
-// document.querySelector('button[aria-label="Close this slider window"]')
