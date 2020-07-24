@@ -10,4 +10,4 @@
 ---
 
 ## TODO
-   1. headless: tru is not working
+   1. headless: true is not working
